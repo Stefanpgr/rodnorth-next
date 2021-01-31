@@ -1,0 +1,82 @@
+@import 'mixin';
+@import 'variables';
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth !important;
+  }
+
+body{
+    font-size: 10px;
+    overflow-x: hidden;
+    background: $background;
+    font-family: "Sailec";
+}
+
+main{
+    margin: auto;
+    height: (100% / 6);
+    width: 100%;
+}
+
+.plr{
+    @include for-phone-only{
+        padding: 1rem;
+    }
+
+    @include for-tablet-portrait-up{
+        padding: 1rem;
+    }
+
+    @include for-tablet-landscape-up{
+        padding: 1rem 2rem;
+    }
+
+    @include for-desktop-up{
+        padding: 1.5rem 3rem;
+    }
+
+    @include for-big-desktop-up{
+        padding: 3.5rem 8.5rem;
+    }
+}
+
+@font-face {
+    font-family: "SailecBold";
+    src: 
+    /* url("/public/fonts/SailecRegular.ttf") format("truetype"), */
+      url("/public/fonts/SailecBold.ttf") format("truetype");
+      font-display: swap;
+  }
+  @font-face {
+    font-family: "SailecMedium";
+    src: url("/public/fonts/SailecMedium.ttf") format("truetype");
+      font-weight: normal;
+      font-display: swap;
+  }
+  @font-face {
+    font-family: "Sailec";
+    src: url("/public/fonts/SailecRegular.ttf") format("truetype");
+      font-weight: normal;
+      font-display: swap;
+  }
+  @font-face {
+    font-family: "SailecThin";
+    src: url("/public/fonts/SailecThin.ttf") format("truetype");
+      font-weight: normal;
+      font-display: swap;
+  }
+  @font-face {
+    font-family: "SailecLight";
+    src: url("/public/fonts/SailecLight.ttf") format("truetype");
+      font-weight: normal;
+      font-display: swap;
+  }
+  
