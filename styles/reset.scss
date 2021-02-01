@@ -26,21 +26,31 @@ main{
     width: 100%;
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    font-family: "SailecBold";
+}
+
+p{
+    font-weight: lighter;
+    font-family: "SailecLight";
+}
+
 .plr{
     @include for-phone-only{
         padding: 1rem;
     }
 
     @include for-tablet-portrait-up{
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     @include for-tablet-landscape-up{
-        padding: 1rem 2rem;
+        padding:  2rem;
     }
 
     @include for-desktop-up{
-        padding: 1.5rem 3rem;
+        padding: 2rem 6.5rem;
     }
 
     @include for-big-desktop-up{
@@ -48,35 +58,3 @@ main{
     }
 }
 
-@font-face {
-    font-family: "SailecBold";
-    src: 
-    /* url("/public/fonts/SailecRegular.ttf") format("truetype"), */
-      url("/public/fonts/SailecBold.ttf") format("truetype");
-      font-display: swap;
-  }
-  @font-face {
-    font-family: "SailecMedium";
-    src: url("/public/fonts/SailecMedium.ttf") format("truetype");
-      font-weight: normal;
-      font-display: swap;
-  }
-  @font-face {
-    font-family: "Sailec";
-    src: url("/public/fonts/SailecRegular.ttf") format("truetype");
-      font-weight: normal;
-      font-display: swap;
-  }
-  @font-face {
-    font-family: "SailecThin";
-    src: url("/public/fonts/SailecThin.ttf") format("truetype");
-      font-weight: normal;
-      font-display: swap;
-  }
-  @font-face {
-    font-family: "SailecLight";
-    src: url("/public/fonts/SailecLight.ttf") format("truetype");
-      font-weight: normal;
-      font-display: swap;
-  }
-  
