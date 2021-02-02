@@ -21,6 +21,7 @@
     "next-images": "^1.7.0",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.3",
+    "react-bootstrap-sweetalert": "^5.2.0",
     "react-dom": "17.0.1",
     "react-slick": "^0.28.0",
     "sass": "^1.32.5"

@@ -1,54 +1,22 @@
-// import { Box, Stack, Container } from '@chakra-ui/react'
 import Head from 'next/head'
-import Image from 'next/image'
 
-// import styles from '../styles/Home.module.scss'
 import { Col, Container, Row } from 'react-bootstrap'
+import GetInTouch from './components/GetInTouch'
+import Nav from './components/Nav'
 
-// const burgerclassNameNamees = classNameNameNames({
-//   burger: true,
-//   toggle: self.state.focused === index,
-// })
 export default function Home() {
   return (
     <div className="">
-      {/* <Head>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       
+
         <title>Rodnorth | Home</title>
-      </Head> */}
+      </Head>
       <main>
         <section className="nav">
           <header>
-            {/* <nav className="plr">
-              <img src="/image/logo.svg" alt="" />
-              <ul className="nav-links">
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="#services">Our service</a>
-                </li>
-                <li>
-                  <a href="/about">About us</a>
-                </li>
-                <li>
-                  <a href="#partners">Partners</a>
-                </li>
-                <li>
-                  <a href="#contact" className="contact">
-                    Contact us
-                  </a>
-                </li>
-              </ul>
-
-              <div className="burger toggle" id="burger">
-                <div className="link1"></div>
-                <div className="link2"></div>
-                <div className="link3"></div>
-              </div>
-            </nav> */}
+            <Nav />
             <article className="hero plr">
               <div className="hero--para">
                 <h3 className="heading" style={{ color: 'white' }}>
@@ -68,7 +36,7 @@ export default function Home() {
                 </button>
               </div>
               <div className="hero--icon">
-                <img src="/image/Asset 1 1.svg" alt="" width="100%" />
+                <img src="/image/welcome-svg.svg" alt="" />
               </div>
             </article>
           </header>
@@ -139,60 +107,70 @@ export default function Home() {
         </section>
 
         <section className="digital-sec plr">
+          <div className="row ">
+            <Col md="5">
+              <div className="digital">
+                <h3 className="heading">
+                  Digital transformation solution <br />
+                  are the gospel we preach <br />
+                  at RodNorth.
+                </h3>
+              </div>
+            </Col>
+
+            <Col md="5">
+              <div className="cloud">
+                <p className="the-cloud">
+                  The cloud is the future of Information Technology. Being a forward thinking organization, RodNorth is
+                  ready to help you start harnessing the power of the cloud without breaking a sweat! We offer services
+                  in the following categories
+                </p>
+              </div>
+            </Col>
+          </div>
+
           <div className="row">
-            <div className="digital">
-              <h3 className="heading">
-                Digital transformation solution <br />
-                are the gospel we preach <br />
-                at RodNorth.
-              </h3>
-            </div>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/cloud.svg" className="card-img-top img-fluid" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Infrastructure services</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
+              </div>
+            </Col>
 
-            <div className="cloud">
-              <p className="the-cloud">
-                The cloud is the future of Information Technology. Being a forward thinking organization, RodNorth is
-                ready to help you start harnessing the power of the cloud without breaking a sweat! We offer services in
-                the following categories
-              </p>
-            </div>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/productivity.svg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Productivity, modern workspace & collaborative solutions</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
+              </div>
+            </Col>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/mail.svg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Messaging services</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
+              </div>
+            </Col>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/security.svg" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Security & governance</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
+              </div>
+            </Col>
           </div>
 
-          <div className="cards">
-            <div className="card">
-              <img src="/image/cloud.svg" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Infrastructure services</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
-              </div>
-            </div>
-
-            <div className="card">
-              <img src="/image/productivity.svg" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Productivity, modern workspace & collaborative solutions</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
-              </div>
-            </div>
-
-            <div className="card">
-              <img src="/image/mail.svg" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Messaging services</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
-              </div>
-            </div>
-
-            <div className="card">
-              <img src="/image/security.svg" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Security & governance</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="butt">
-            <button className="btn btn1">
+          <div className="butt row">
+            <button className="btn">
               contact us
               <span>
                 <img src="/image/arrow-right.svg" alt="arrow-right" />
@@ -250,120 +228,48 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="touchs plr" id="contact">
-          <div className="touch">
-            <div className="touch__head">
-              <h3>Get in touch!</h3>
-              <p>We're excited to work with you</p>
-            </div>
-            <div className="touch__body">
-              <div className="touch__icons">
-                <img src="/image/location.png" alt="" />
-                <div className="touch__write">
-                  <h6>Headoffice</h6>
-                  <p>
-                    10a Ajanaku street, Awuse estate, <br />
-                    off Salvation road, Opebi Lagos.
-                  </p>
-                </div>
-                <div className="touch__write">
-                  <h6>Branch office</h6>
-                  <p>
-                    Suite 33, Distinct Plaza, 12 Medical road, <br />
-                    Ikeja Lagos.
-                  </p>
-                </div>
-              </div>
-              <div className="touch__icons">
-                <img src="/image/call.png" alt="" />
-                <div className="touch__write">
-                  <h6>Call</h6>
-                  <p>
-                    +234 703 761 0856 <br />
-                    +234 802 103 7811
-                  </p>
-                </div>
-                <div className="touch__write">
-                  <h6>Whatsapp</h6>
-                  <p>+234 705 485 8666</p>
-                </div>
-              </div>
-              <div className="touch__icons">
-                <img src="/image/mail.png" alt="" style={{ marginTop: '-50px' }} />
-                <div className="touch__write">
-                  <h6>Email</h6>
-                  <p>
-                    info@rodnorth.com <br />
-                    online@rodnorth.com
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="send-message">
-            <h3 className="text-center msg-title">Send us a message</h3>
-            <form action="">
-              <div className="card1">
-                <div className="input">
-                  <label for="name">Enter your full name</label>
-                  <br />
-                  <input type="text" name="name" id="" placeholder="Enter your first & last name" />
-                </div>
-                <div className="input">
-                  <label for="email">Email address</label>
-                  <br />
-                  <input type="email" name="" id="" placeholder="Enter your last name" />
-                </div>
-                <div className="input">
-                  <label for="phone">Phone number</label>
-                  <br />
-                  <input type="text" name="" id="" placeholder="Enter your phone number" />
-                </div>
-              </div>
-
-              <div className="card2">
-                <label for="text">Message</label>
-                <textarea name="text" id="" cols="50" rows="9.9" placeholder="Type your message here"></textarea>
-              </div>
-              <div className="text-center">
-                <button className="form-btn">Submit</button>
-              </div>
-            </form>
-          </div>
-        </section>
+        <GetInTouch />
 
         <section className="blog">
-          <h3>From our blog</h3>
-          <div className="cards>">
-            <div className="card">
-              <img src="/image/blog1.png" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">This is a blog title</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
+          <h3 className="text-center">From our blog</h3>
+          <div className="row plr" style={{ justifyContent: 'center', alignItems: 'center' }}>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/blog1.png" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">This is a blog title</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
               </div>
-            </div>
-            <div className="card">
-              <img src="/image/blog2.png" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">This is a blog title</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
+            </Col>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/blog2.png" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">This is a blog title</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
               </div>
-            </div>
-            <div className="card">
-              <img src="/image/blog3.png" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">This is a blog title</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
+            </Col>
+            <Col md="3">
+              <div className="card">
+                <img src="/image/blog3.png" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">This is a blog title</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
               </div>
-            </div>
-            <div className="card">
-              <img src="/image/blog4.png" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">This is a blog title</h5>
-                <p className="card-text">The cloud is the future of Information Technology.</p>
+            </Col>
+
+            <Col md="3">
+              <div className="card">
+                <img src="/image/blog4.png" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">This is a blog title</h5>
+                  <p className="card-text">The cloud is the future of Information Technology.</p>
+                </div>
               </div>
-            </div>
+            </Col>
           </div>
         </section>
 

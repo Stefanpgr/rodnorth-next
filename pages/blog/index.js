@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { Carousel, Col, Row, Container, CardDeck, Card } from 'react-bootstrap'
 import styles from '../../styles/Blog.module.scss'
 import Link from 'next/link'
+import GetInTouch from '../components/GetInTouch'
+import Nav from '../components/Nav'
 const { BLOG_URL, API_KEY } = process.env
 
 function sortFunction(a, b) {
@@ -11,9 +13,7 @@ function sortFunction(a, b) {
 }
 
 async function getPosts() {
-  const res = await fetch(
-    `${BLOG_URL}/posts?key=${API_KEY}&fields=title,url,feature_image,excerpt,slug,published_at,custom_excerpt,featured`
-  ).then((res) => res.json())
+  const res = await fetch(`${BLOG_URL}/posts?key=${API_KEY}`).then((res) => res.json())
 
   return res
 }
@@ -40,12 +40,13 @@ const Blog = ({ posts }) => {
           crossorigin="anonymous"
         />
       </Head>
+      <Nav />
       <Container>
         <div className="row">
           {posts.map((el, i) => (
             <Col key={el.id} md="6">
               <Link href={{ pathname: '/blog/[slug]' }} as={`/blog/${el.slug}`}>
-                <Card style={{ maxWidth: '623px' }} className={`${styles.cardCont} mx-3 my-3`}>
+                <Card style={{ maxWidth: '623px' }} className={`${styles.cardCont} mx-1 my-3`}>
                   <div className="row no-gutters">
                     <div className="col-md-5">
                       <img src={el.feature_image} className={`${styles.postImg} `} />
@@ -70,6 +71,7 @@ const Blog = ({ posts }) => {
           ))}
         </div>
       </Container>
+      <GetInTouch />
     </div>
   )
 }
