@@ -26,10 +26,10 @@
    //media query
 
    @mixin for-phone-only {
-    @media (max-width: 650px) { @content; }
+    @media (max-width: 510px) { @content; }
   }
   @mixin for-tablet-portrait-up {
-    @media (min-width: 651px) { @content; }
+    @media (min-width: 511px) { @content; }
   }
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }

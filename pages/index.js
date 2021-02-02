@@ -288,7 +288,7 @@ export default function Home() {
                   <p>+234 705 485 8666</p>
                 </div>
               </div>
-              <div className="touch__icons">
+              <div className="touch__icons email">
                 <img src="/image/mail.png" alt="" style={{ marginTop: '-50px' }} />
                 <div className="touch__write">
                   <h6>Email</h6>
@@ -324,12 +324,12 @@ export default function Home() {
 
               <div className="card2">
                 <label for="text">Message</label>
-                <textarea name="text" id="" cols="50" rows="9.9" placeholder="Type your message here"></textarea>
-              </div>
-              <div className="text-center">
-                <button className="form-btn">Submit</button>
+                <textarea name="text" id="" cols="40" rows="11" placeholder="Type your message here"></textarea>
               </div>
             </form>
+            <div className="text-center">
+                <button className="form-btn">Submit</button>
+              </div>
           </div>
         </section>
 

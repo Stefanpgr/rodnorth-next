@@ -739,14 +739,198 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      h6{
+        color:  $buttonColor;
+        margin: 5px 0;
+      }
     }
   }
 
   .send-message{
     background-color: white;
+    h3{
+      text-align: center;
+    }
+    input,textarea{
+      border: none;
+      outline: none;
+     background: #F0F0F2;
+     padding: 13px 10px;
+     border-radius: 5px;
+     width: 90%;
+    }
+
+    .input,.card2{
+      margin: 15px;
+    }
+
   }
-  @include for-phone-only{}
-  @include for-tablet-portrait-up{}
-  @include for-tablet-landscape-up{}
-  @include for-desktop-up{}
+  
+  @include for-phone-only{
+    .touch{
+      .touch__head{
+        h3,p{
+          font-size: 1rem;
+        }
+      }
+
+    .touch__body{
+      display: grid;
+      grid-template-columns: auto;
+       
+      .touch__icons{
+        margin: 10px 20px;
+        h6,p{
+          font-size: .7rem;
+        }
+        
+      }
+
+      .email{
+        margin-top: 25px;
+      }
+    }
+    }
+
+    .send-message{
+      h3{
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+
+      
+
+      .form-btn{
+        background-color: $buttonColor;
+        border: none;
+        outline: none;
+        padding:  10px;
+        width: 30%;
+        color: white;
+        margin: 15px 100px 20px 90px;
+      }
+    }
+  }
+  @include for-tablet-portrait-up{
+    .touch{
+      .touch__head{
+        h3,p{
+          font-size: 1.2rem;
+        }
+      }
+
+    .touch__body{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+     
+       
+      .touch__icons{
+        margin: 20px auto;
+        h6,p{
+          font-size: .7rem;
+        }
+        
+      }
+
+    }
+    }
+
+    .send-message{
+      width: 70vw;
+      margin: 0 100px;
+      form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+
+        input,textarea{
+          border: none;
+          outline: none;
+         background: #F0F0F2;
+         padding: 13px 10px;
+         border-radius: 5px;
+         width: 90%;
+         margin-top: 5px;
+        }
+  
+        label{
+          font-size: .8rem;
+        }
+      }
+      h3{
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+
+      .form-btn{
+        background-color: $buttonColor;
+        border: none;
+        outline: none;
+        padding:  10px;
+        width: 20%;
+        color: white;
+        vertical-align: middle;
+        margin: 30px 250px;
+      }
+    }
+  }
+  @include for-tablet-landscape-up{
+    
+    .send-message{
+      width: 70vw;
+      margin: 0 150px;
+      form{
+        margin: auto 50px;
+        
+
+        input,textarea{
+         width: 90%;
+        }
+  
+        label{
+          font-size: .8rem;
+        }
+      }
+      h3{
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+
+      .form-btn{
+        
+        width: 15%;
+        margin: 30px 350px;
+      }
+    }
+  }
+  @include for-desktop-up{
+    .send-message{
+      width: 60vw;
+      margin: 0 200px;
+      form{
+        margin: auto 50px;
+        
+
+        input,textarea{
+         width: 90%;
+        }
+  
+        label{
+          font-size: .8rem;
+        }
+      }
+      h3{
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+
+      .form-btn{
+        
+        width: 15%;
+        margin: 30px 400px;
+      }
+    }
+  }
 }
