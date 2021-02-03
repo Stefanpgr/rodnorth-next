@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export -o _static"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.2.1",
@@ -19,6 +20,7 @@
     "framer-motion": "^3.2.2-rc.1",
     "next": "10.0.5",
     "next-images": "^1.7.0",
+    "pure-react-carousel": "^1.27.6",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-bootstrap-sweetalert": "^5.2.0",

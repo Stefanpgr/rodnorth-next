@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Form, Row } from 'react-bootstrap'
+import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
 import Nav from './components/Nav'
 
@@ -60,7 +61,7 @@ export default function Home() {
               </h3>
             </div>
 
-            <div className="agile">
+            <div className="agile space-between">
               <div className="flexs">
                 <div className="flex">
                   <div>
@@ -107,8 +108,8 @@ export default function Home() {
         </section>
 
         <section className="digital-sec plr">
-          <div className="row ">
-            <Col md="5">
+          <div className="row space-between ">
+            <Col md="4">
               <div className="digital">
                 <h3 className="heading">
                   Digital transformation solution <br />
@@ -129,7 +130,7 @@ export default function Home() {
             </Col>
           </div>
 
-          <div className="row">
+          <div className="row ">
             <Col md="3">
               <div className="card">
                 <img src="/image/cloud.svg" className="card-img-top img-fluid" alt="..." />
@@ -185,17 +186,19 @@ export default function Home() {
         <section className="partners plr" id="partners">
           <h3 className="patner heading text-center agile">Our Partners</h3>
           <div className="cloud">
-            <img src="/image/google.png" alt="" />
-            <img src="/image/aws.png" alt="" />
-            <img src="/image/azure.png" alt="" />
-            <img src="/image/hystax.png" alt="" />
+            <img src="/image/google.png" alt="google" />
+            <img src="/image/aws.png" alt="aws" />
+            <img src="/image/azure.png" alt="azure" />
+            <img src="/image/hystax.png" alt="hystax" />
+            <img src="/image/whatsapp-big.svg" alt="whatsapp" />
           </div>
           <div className="cloud">
-            <img src="/image/Group 32.png" alt="" />
-            <img src="/image/hp.png" alt="" />
-            <img src="/image/cloud.png" alt="" />
-            <img src="/image/s.png" alt="" />
-            <img src="/image/google.png" alt="" />
+            <img src="/image/Group 32.png" alt="Digital Ocean" />
+            <img src="/image/hp.png" alt="hp" />
+            <img src="/image/cloud.png" alt="cloud" />
+            <img src="/image/s.png" alt="s" />
+            <img src="/image/cloudhealth.svg" alt="cloud health" />
+            <img src="/image/nutanix.svg" alt="nutanix" />
           </div>
 
           <div className="testimony">
@@ -273,46 +276,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer>
-          <div className="foot__mail">
-            <img src="/image/mail.svg" alt="" className="box bounce" />
-            <div className="sub">
-              <h3>Subscribe to our newsletter</h3>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email address" />
-              <button className="submit">Submit</button>
-            </div>
-          </div>
-
-          <div className="foot__ul">
-            <div className="ul__icons">
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div className="bar">
-              <ul>
-                <li>
-                  <h3>RodNorth Ltd</h3>
-                </li>
-                <li>© 2020 RodNorth.com all rights reserved. Ltd</li>
-              </ul>
-            </div>
-            <div className="bar">
-              <ul>
-                <li>Enterprise Retail</li>
-                <li>Home</li>
-                <li>Our Services</li>
-                <li>About Us</li>
-                <li>Partners</li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   )

@@ -47,3 +47,6 @@ a {
 html{
   scroll-behavior: smooth;
 }
+body{
+  height: 100vh;
+}

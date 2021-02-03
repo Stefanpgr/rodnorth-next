@@ -1,16 +1,18 @@
 import Head from 'next/head'
-import { Carousel, Col, Row, Container, CardDeck, Card } from 'react-bootstrap'
+import { Col, Row, Container, CardDeck, Card } from 'react-bootstrap'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel'
 import styles from '../../styles/Blog.module.scss'
 import Link from 'next/link'
 import GetInTouch from '../components/GetInTouch'
 import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 const { BLOG_URL, API_KEY } = process.env
 
-function sortFunction(a, b) {
-  var dateA = new Date(a.published_at).getTime()
-  var dateB = new Date(b.published_at).getTime()
-  return dateA > dateB ? 1 : -1
-}
+// function sortFunction(a, b) {
+//   var dateA = new Date(a.published_at).getTime()
+//   var dateB = new Date(b.published_at).getTime()
+//   return dateA > dateB ? 1 : -1
+// }
 
 async function getPosts() {
   const res = await fetch(`${BLOG_URL}/posts?key=${API_KEY}`).then((res) => res.json())
@@ -39,8 +41,25 @@ const Blog = ({ posts }) => {
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
           crossorigin="anonymous"
         />
+
+        <title>Rodnorth | Blog</title>
       </Head>
       <Nav />
+      <CarouselProvider naturalSlideWidth={100} naturalSlideHeight={45} totalSlides={3}>
+        <Slider>
+          <Slide index={0}>
+            <Image src={posts[0].feature_image} />
+          </Slide>
+          <Slide index={1}>
+            <Image src={posts[1].feature_image} />
+          </Slide>
+          <Slide index={2}>
+            <Image src={posts[2].feature_image} />
+          </Slide>
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
       <Container>
         <div className="row">
           {posts.map((el, i) => (
@@ -72,6 +91,7 @@ const Blog = ({ posts }) => {
         </div>
       </Container>
       <GetInTouch />
+      <Footer />
     </div>
   )
 }
