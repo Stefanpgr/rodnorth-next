@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import Link from 'next/link'
 import Nav from '../components/Nav'
+import Footer from '../components/Footer'
+import GetInTouch from '../components/GetInTouch'
 
 const { BLOG_URL, API_KEY } = process.env
 
@@ -69,9 +71,7 @@ const Content = ({ post, recent }) => {
     // return <Spinner animation="grow" />
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <div className="spinner-border" role="status">
-          <h1>loading...</h1>
-        </div>
+        <div className="spinner-border" role="status"></div>
       </div>
     )
   }
@@ -125,6 +125,8 @@ const Content = ({ post, recent }) => {
           </div>
         </Container>
       </div>
+      <GetInTouch />
+      <Footer />
     </div>
   )
 }

@@ -49,10 +49,11 @@
 
     .head {
       h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.2;
-        padding: 20px 30px;
+        padding: 20px 18px;
         text-align: center;
+        color: #263449;
       }
     }
 
@@ -61,7 +62,7 @@
       padding: 20px 0;
 
       .flex {
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
 
         img {
           padding-right: 15px;
@@ -101,6 +102,7 @@
         line-height: 1.2;
         padding: 20px 35px;
         text-align: center;
+        color: #263449;
       }
     }
 
@@ -129,7 +131,7 @@
       }
 
       .flexs__img img {
-        width: 45vw;
+        width: 574px;
       }
     }
   }
@@ -153,6 +155,7 @@
         line-height: 1.2;
         padding: 25px 200px;
         text-align: center;
+        color: #263449;
       }
     }
 
@@ -165,7 +168,7 @@
         width: 35vw;
 
         .flex {
-          margin-bottom: 27px;
+          // margin-bottom: 27px;
 
           img {
             padding-right: 15px;
@@ -191,6 +194,13 @@
       }
     }
   }
+
+  .logo {
+    p {
+      color: #303742;
+      font-family: SailecMedium;
+    }
+  }
   @include for-desktop-up {
     .logo {
       padding-bottom: 40px;
@@ -199,18 +209,21 @@
         width: 10%;
       }
       p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-align: center;
         padding: 10px 0;
       }
     }
 
     .head {
+      margin-top: 4rem;
+
       h3 {
         font-size: 1.9rem;
         line-height: 1.2;
-        padding: 25px 24rem;
+        padding: 25px 22rem;
         text-align: center;
+        color: #263449;
       }
     }
 
@@ -224,7 +237,7 @@
         padding-right: 30px;
 
         .flex {
-          margin-bottom: 50px;
+          // margin-bottom: 50px;
 
           img {
             padding-right: 15px;
@@ -244,7 +257,7 @@
         }
 
         .flexs__img img {
-          width: 100%;
+          width: 574px;
           margin-left: 150px;
         }
       }
@@ -275,6 +288,7 @@
     height: 310px;
     box-shadow: 0px 2px 9px #efeded;
     margin: 0.8rem auto;
+    border: none;
     // background-color: aqua;
     .card-img-top {
       width: 150px;
@@ -475,12 +489,14 @@
     .digital {
       padding-bottom: 40px;
       h3 {
-        font-size: 1.9rem;
+        font-size: 38px;
         line-height: 1.2;
         width: 50vw;
       }
     }
-
+    .space-between {
+      justify-content: space-between !important;
+    }
     .cloud {
       p {
         font-size: 1.1rem;
@@ -543,6 +559,7 @@
     .parag {
       p {
         font-size: 1rem;
+        // background-color: brown;
       }
 
       .person {
@@ -692,7 +709,7 @@
 
     .cloud {
       img {
-        width: 18%;
+        width: 14%;
       }
     }
 
@@ -768,7 +785,7 @@
       }
     }
     .touch__icons {
-margin-top: 2.5rem;
+      margin-top: 2.5rem;
     }
     .touch__icons h6 {
       font-size: 16px;
@@ -785,7 +802,7 @@ margin-top: 2.5rem;
 
       color: #263449;
     }
-  
+
     // .touch__body {
     //   display: flex;
     //   justify-content: space-between;
@@ -856,8 +873,6 @@ margin-top: 2.5rem;
     }
   }
 
-
-
   @include for-phone-only {
     .send-message {
       .message-box textarea {
@@ -891,25 +906,21 @@ margin-top: 2.5rem;
   }
 }
 
-
-.blog{
+.blog {
   justify-content: center;
   align-items: center;
-  .card{
- 
-  width: 261px;
-  margin: 0.8rem auto;
-  height: auto;
-  border: 1px solid #D6D6D6;
-box-sizing: border-box;
-box-shadow: 0px 2px 9px #EFEDED;
+  .card {
+    width: 261px;
+    margin: 0.8rem auto;
+    height: auto;
+    border: 1px solid #d6d6d6;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 9px #efeded;
   }
 
   @include for-phone-only {
-    
   }
   @include for-tablet-portrait-up {
-   
   }
   @include for-tablet-landscape-up {
   }
@@ -917,22 +928,150 @@ box-shadow: 0px 2px 9px #EFEDED;
   }
 }
 
-.alert-title{
+.alert-title {
   font-family: SailecMedium;
   font-size: 24px;
-line-height: 44px;
-color: #263449;
-text-transform: uppercase;
-margin-bottom: 2rem;
+  line-height: 44px;
+  color: #263449;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
-.alert-message{
+.alert-message {
   font-size: 18px;
-line-height: 27px;
-/* or 150% */
+  line-height: 27px;
+  /* or 150% */
 
-text-align: center;
+  text-align: center;
 
-color: #263449;
-margin-top: 2rem;
+  color: #263449;
+  margin-top: 2rem;
+}
+
+.foot__mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #181433;
+  // height: 254px;
+  padding: 4rem 2rem;
+
+  .sub h3 {
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 44px;
+    font-family: SailecBold;
+    padding: 1rem 0px;
+  }
+  .sub input {
+    background-color: #f0f0f2;
+    outline: none;
+    outline-style: none;
+  }
+  .sub input:focus {
+    outline-style: none !important;
+    outline: none !important;
+  }
+  .sub button {
+    background-color: #990621;
+    color: #fff;
+    text-transform: capitalize !important;
+    width: 100%;
+  }
+
+  @include for-phone-only {
+    .sub h3 {
+      font-size: 1.9rem;
+      line-height: 29px;
+      text-align: center;
+      padding: 1.5rem 0px;
+    }
+    .sub input {
+      margin-bottom: 1.1rem;
+    }
+  }
+  @include for-tablet-portrait-up {
+  }
+  @include for-tablet-landscape-up {
+  }
+  @include for-desktop-up {
+    .sub {
+      margin-left: 2.4rem;
+    }
+  }
+}
+
+.foot__ul {
+  background-color: #15151f;
+  padding: 1rem 5rem;
+  // .foot__ul ul {
+  //   padding: 0 !important;
+  // }
+  .foot_icon {
+
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    list-style: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  .line{
+    border: 1px solid #40405A;
+    margin-bottom: 2rem;
+  }
+  .foot_details{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .foot_links {
+    list-style: none;
+    gap: 20px;
+    display: flex;
+   flex-wrap: wrap;
+cursor: pointer;
+  }
+  .foot_links li{
+font-family: Sailec;
+font-size: 14px;
+line-height: 19px;
+
+  }
+
+  .foot_logo{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+   flex-wrap: wrap;
+
+   align-items: center;
+  }
+   .rights{
+    font-family: Sailec;
+    font-size: 14px;
+    line-height: 19px;
+   
+  }
+  @include for-phone-only {
+    padding: 1rem 2rem !important;
+   
+    .foot_icon {
+      justify-content: center;
+    }
+    .foot_links{
+      display: block;
+   
+     
+    }
+    .foot_links li{
+      font-size: 13px;
+      padding-bottom: 5px;
+    }
+  }
 }

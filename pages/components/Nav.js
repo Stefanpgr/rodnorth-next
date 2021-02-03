@@ -1,7 +1,24 @@
 import React from 'react'
 const Nav = () => {
+  const navSlide = () => {
+    const burger = document.querySelector('.burger')
+    const nav = document.querySelector('.nav-links')
+    const navLinks = document.querySelector('.nav-links li')
+
+    nav.classList.toggle('nav-active')
+
+    // navLinks.forEach((link, index) => {
+    //   if (link.style.animation) {
+    //     link.style.animation = ''
+    //   } else {
+    //     link.style.animation = `navLinkFade 0.5s ease forward ${index / 5 + 0.4}s`
+    //   }
+    // })
+
+    burger.classList.toggle('toggle')
+  }
   return (
-    <nav className="plr">
+    <nav className="plrn">
       <img src="/image/logo.svg" alt="" />
       <ul className="nav-links">
         <li>
@@ -26,7 +43,7 @@ const Nav = () => {
         </li>
       </ul>
 
-      <div className="burger toggle" id="burger">
+      <div onClick={navSlide} className="burger toggle" id="burger">
         <div className="link1"></div>
         <div className="link2"></div>
         <div className="link3"></div>

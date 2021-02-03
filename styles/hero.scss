@@ -1,12 +1,29 @@
 @import "mixin";
 @import "reset";
 
+
+.plrn{
+  
+    padding: 1rem 6rem;
+
+
+}
+@media (max-width: 768px) {
+  .plrn{
+  
+    padding: 1rem 1rem;
+
+
+}
+
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .nav-links {
+  // background-color: darkred;
+ 
+    .nav-links {
     font-size: 1rem;
     font-weight: 500;
     line-height: 2;
@@ -48,7 +65,7 @@ nav {
     #burger {
       display: block;
     }
-
+   
     .nav-links {
       display: flex;
       flex-direction: column;
@@ -125,6 +142,7 @@ nav {
   }
 
   @include for-desktop-up {
+   
     .nav-links {
       font-size: 1rem;
 

@@ -118,7 +118,7 @@ const GetInTouch = () => {
                   <Col md="5">
                     <div className="card1">
                       <div className="input">
-                        <label for="name">Enter your full name</label>
+                        <label htmlFor="name">Enter your full name</label>
                         <br />
                         <input
                           required
@@ -131,7 +131,7 @@ const GetInTouch = () => {
                         />
                       </div>
                       <div className="input">
-                        <label for="email">Email address</label>
+                        <label htmlFor="email">Email address</label>
                         <br />
                         <input
                           required
@@ -144,12 +144,12 @@ const GetInTouch = () => {
                         />
                       </div>
                       <div className="input">
-                        <label for="phone">Phone number</label>
+                        <label htmlFor="phone">Phone number</label>
                         <br />
                         <input
                           required
                           type="text"
-                          name=""
+                          name="phone"
                           id=""
                           value={phone}
                           placeholder="Enter your phone number"
@@ -160,7 +160,7 @@ const GetInTouch = () => {
                   </Col>
                   <Col md="5">
                     <div className="message-box">
-                      <label for="text">Message</label>
+                      <label htmlFor="text">Message</label>
                       <textarea
                         required
                         name="text"
