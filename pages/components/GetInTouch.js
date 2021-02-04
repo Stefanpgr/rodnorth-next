@@ -85,11 +85,18 @@ const GetInTouch = () => {
                 </div>
                 <div className="touch__write">
                   <h6>Whatsapp</h6>
+
                   <p>
-                    +234 705 485 8666
-                    <span>
-                      <img className="pl-2" src="/image/whatsapp.svg" />
-                    </span>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=2348053111852"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      +234 805 311 1852
+                      <span>
+                        <img className="pl-2" src="/image/whatsapp.svg" />
+                      </span>
+                    </a>
                   </p>
                 </div>
               </div>

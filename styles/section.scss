@@ -334,18 +334,22 @@
     .digital {
       padding-bottom: 30px;
       h3 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 1.2;
-        width: 50vw;
+        // text-align: center;
+        // width: 50vw;
+        // background-color: red;
       }
+     
     }
 
     .cloud {
       p {
-        font-size: 0.7rem;
-        line-height: 30px;
+        font-size: 1rem;
+        // line-height: 30px;
         padding-bottom: 30px;
         font-weight: lighter;
+        // background-color: red;
       }
     }
 
@@ -569,9 +573,13 @@
         padding: 20px 0;
 
         h5 {
-          font-size: 0.8rem;
+          font-size: 1.2rem ;
+          
         }
-
+p{
+  font-size: 1.2rem ;
+ 
+}
         img {
           flex: 0 0 60px;
           width: 60px;
@@ -592,6 +600,22 @@
     width: 100%;
   }
   @include for-phone-only {
+    .testimony{
+      padding: 2rem 1rem !important;
+    }
+   
+   .person{
+   h5{
+      font-size: 1rem !important;
+
+   }
+ 
+    p{
+    font-size: 1rem !important;
+    
+
+    }
+   }
     h3 {
       font-size: 1rem;
       padding-bottom: 20px;
@@ -744,7 +768,7 @@
 
           h5,
           p {
-            font-size: 0.8rem;
+            font-size: 1.2rem;
           }
 
           img {
@@ -916,8 +940,35 @@
     border: 1px solid #d6d6d6;
     box-sizing: border-box;
     box-shadow: 0px 2px 9px #efeded;
+    cursor: pointer;
+  }
+  .card-title{
+    font-size: 18px;
+line-height: 22px;
+color: #000000;
+  }
+  .card-text{
+    font-size: 15px;
+line-height: 22px;
+color: #5B6370;
+
   }
 
+  button{
+    background: #990621;
+    border-radius: 4px;
+    // width: 237px;
+    padding: 0 4rem;
+    color: #fff;
+    text-transform: capitalize;
+    height: 48px;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  button:hover{
+    color: #fff;
+  }
   @include for-phone-only {
   }
   @include for-tablet-portrait-up {

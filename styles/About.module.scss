@@ -1,0 +1,137 @@
+$plr: 3rem;
+.container {
+  padding: 4rem $plr;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hero {
+  background: #181433;
+  // overflow: visible;
+  // height: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  .heroText {
+    align-items: center;
+    padding-left: 3rem;
+    margin: auto;
+  }
+  .heroText h3 {
+    font-size: 42px;
+    line-height: 50px;
+    color: #ffffff;
+    font-family: SailecBold;
+  }
+  .heroText p {
+    color: #d6e2e3;
+    font-family: Sailec;
+    font-size: 19px;
+    line-height: 30px;
+    padding: 1rem 0px;
+  }
+  .heroText button {
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 28px;
+font-family: Sailec;
+    color: #ffffff;
+    background: #990621;
+    border-radius: 4px;
+  }
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+    .heroText{
+        padding-left: 1rem;
+    }
+    .headImg{
+        display: none;
+    }
+  }
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // background-color: aqua;
+  padding: 3rem $plr;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 38px;
+    line-height: 44px;
+    color: #263449;
+    padding-bottom: 1rem;
+  }
+  p{
+    font-size: 19px;
+    line-height: 30px;
+    /* or 158% */
+    font-family: Sailec;
+    
+    color: #303742;
+  }
+  @media (max-width: 768px) {
+    padding: 4rem 1rem;
+    h3{
+        font-size: 2.3rem;
+      
+    }
+    p{
+        font-size: 1.2rem;
+       
+    }
+  }
+}
+.section2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // background-color: aqua;
+  padding: 4rem $plr;
+  justify-content: center;
+  align-items: center;
+  background: #eeedf3;
+//  row-gap: 3rem;
+.text-vision{
+    padding-left: 2rem;
+}
+
+  h4{
+    font-size: 31px;
+    line-height: 44px;
+   font-family: SailecMedium;
+    color: #990621;
+  }
+  p{
+    font-size: 21px;
+    line-height: 30px;
+   font-family: Sailec;
+    color: #303742;
+    
+  }
+.vision{
+    padding-left: 2rem;
+}
+  @media (max-width: 768px) {
+    padding: 4rem 1rem;
+    .vision{
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+  h4{
+        font-size: 1.4rem;
+      
+    }
+    p{
+        font-size: 1.2rem;
+       
+    }
+  }
+}
