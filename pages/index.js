@@ -1,11 +1,29 @@
 import Head from 'next/head'
-
+import Link from 'next/link'
 import { Col, Container, Form, Row } from 'react-bootstrap'
 import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
 import Nav from './components/Nav'
 
-export default function Home() {
+const { BLOG_URL, API_KEY } = process.env
+async function getPosts() {
+  const res = await fetch(
+    `${BLOG_URL}/posts?key=${API_KEY}&fields=title,feature_image,slug,custom_excerpt,excerpt&limit=4`
+  ).then((res) => res.json())
+
+  return res
+}
+
+export const getStaticProps = async ({ params }) => {
+  const { posts } = await getPosts()
+
+  return {
+    props: { posts },
+  }
+}
+
+export default function Home({ posts }) {
+  // console.log(posts)
   return (
     <div className="">
       <Head>
@@ -107,15 +125,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="digital-sec plr">
+        <section className="digital-sec plr" id="services">
           <div className="row space-between ">
             <Col md="4">
               <div className="digital">
-                <h3 className="heading">
-                  Digital transformation solution <br />
-                  are the gospel we preach <br />
-                  at RodNorth.
-                </h3>
+                <h3 className="heading">Digital transformation solution are the gospel we preach at RodNorth.</h3>
               </div>
             </Col>
 
@@ -236,16 +250,23 @@ export default function Home() {
         <section className="blog">
           <h3 className="text-center">From our blog</h3>
           <div className="row plr" style={{ justifyContent: 'center', alignItems: 'center' }}>
-            <Col md="3">
-              <div className="card">
-                <img src="/image/blog1.png" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">This is a blog title</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
-                </div>
-              </div>
-            </Col>
-            <Col md="3">
+            {posts.map((el, i) => (
+              <Col md="3" key={i}>
+                <Link href={{ pathname: '/blog/[slug]' }} as={`/blog/${el.slug}`}>
+                  <div className="card">
+                    <img src={el.feature_image} className="card-img-top" alt="..." />
+                    <div className="card-body">
+                      <h5 className="card-title">{el.title}</h5>
+                      <p className="card-text">{el.custom_excerpt}</p>
+                    </div>
+                  </div>
+                </Link>
+              </Col>
+            ))}
+            <Link href="/blog">
+              <button className="btn">See More</button>
+            </Link>
+            {/* <Col md="3">
               <div className="card">
                 <img src="/image/blog2.png" className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -272,7 +293,7 @@ export default function Home() {
                   <p className="card-text">The cloud is the future of Information Technology.</p>
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </div>
         </section>
 
