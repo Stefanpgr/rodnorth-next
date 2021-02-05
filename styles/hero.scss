@@ -11,156 +11,187 @@
 @media (max-width: 768px) {
   .plrn{
   
-    padding: 1rem 1rem;
-
-
+    padding: 1rem 1rem !important;
 }
-
+// nav{
+//   .nav-link{
+    
+   
+//     padding: 0.7rem 1rem !important;
+    
+//   }
+// }
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // background-color: darkred;
+@media (min-width: 768px) {
+nav{
  
-    .nav-links {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 2;
-    display: flex;
-    justify-content: space-around;
+  padding: 0 5rem !important
+}
+}
 
-    .contact {
-      padding: 10px;
-      background-color: #990621;
-      color: white;
-    }
+nav{
 
-    li,
-    a {
-      text-decoration: none;
-      list-style: none;
-      color: white;
-      text-align: center;
-    }
-
-    a {
-      &:hover {
-        padding: 10px;
-        background-color: #990621;
-        color: white;
-      }
-    }
+  .nav-link{
+    color: #181433 !important;
+    font-size: 16px;
+    padding: 0.7rem 1rem !important;
+    // align-items: center;
+    // justify-content: center;
+    align-self: baseline;
+    .contact{
+height: 42px;
+      background: #990621;
+      border-radius: 4px;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+     width: 123px;
+     color: #fff;
+        }
   }
-
-  .burger div {
-    width: 25px;
-    height: 5px;
-    margin: 5px;
-    background-color: $heroColor;
-    transition: all 0.3s ease;
-  }
-
-  @include for-phone-only {
-    #burger {
-      display: block;
-    }
-   
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      position: absolute;
-      right: 0;
-      top: 10vh;
-      width: 100%;
-      height: 90vh;
-      background-color: $heroColor;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in-out;
-
-      li {
-        opacity: 1;
-      }
-    }
-    .nav-active {
-      transform: translateX(0%);
-    }
-
-    @keyframes navLinkFade {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0px);
-      }
-    }
-
-    //   .toggle .link1{
-    //       transform: rotate(-45deg) translate(-5px,6px);
-    //   }
-
-    //   .toggle .link2{
-    //     opacity: 0;
-    // }
-
-    // .toggle .link3{
-    //     transform: rotate(45deg) translate(-5px,-6px);
-    // }
-  }
-
-  @include for-tablet-portrait-up {
-    .burger {
-      display: none;
-      cursor: pointer;
-    }
-
-    .nav-links {
-      font-size: 0.8rem;
-
-      li,
-      a {
-        margin: 0 4px;
-        color: $textColor;
-      }
-    }
-  }
-
-  @include for-tablet-landscape-up {
-    .nav-links {
-      font-size: 1rem;
-      margin: 0 0 0 30px;
-
-      li,
-      a {
-        margin: 0 5px;
-        color: $textColor;
-      }
-    }
-  }
-
-  @include for-desktop-up {
-   
-    .nav-links {
-      font-size: 1rem;
-
-      li,
-      a {
-        margin: 0 10px;
-        color: $textColor;
-      }
-    }
+  .navbar-toggler{
+    border: none;
   }
 
   @include for-big-desktop-up {
+
+    
+
   }
 }
+// nav {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   // background-color: darkred;
+ 
+//     .nav-links {
+//     font-size: 1rem;
+//     font-weight: 500;
+//     line-height: 2;
+//     display: flex;
+//     justify-content: space-around;
+
+//     .contact {
+//       padding: 10px;
+//       background-color: #990621;
+//       color: white;
+//     }
+
+//     li,
+//     a {
+//       text-decoration: none;
+//       list-style: none;
+//       color: white;
+//       text-align: center;
+//     }
+
+//     a {
+//       &:hover {
+//         padding: 10px;
+//         background-color: #990621;
+//         color: white;
+//       }
+//     }
+//   }
+
+//   .burger div {
+//     width: 25px;
+//     height: 5px;
+//     margin: 5px;
+//     background-color: $heroColor;
+//     transition: all 0.3s ease;
+//   }
+
+//   @include for-phone-only {
+//     #burger {
+//       display: block;
+//     }
+   
+//     .nav-links {
+//       display: flex;
+//       flex-direction: column;
+//       align-content: center;
+//       position: absolute;
+//       right: 0;
+//       top: 10vh;
+//       width: 100%;
+//       height: 90vh;
+//       background-color: $heroColor;
+//       transform: translateX(100%);
+//       transition: transform 0.5s ease-in-out;
+
+//       li {
+//         opacity: 1;
+//       }
+//     }
+//     .nav-active {
+//       transform: translateX(0%);
+//     }
+
+//     @keyframes navLinkFade {
+//       from {
+//         opacity: 0;
+//         transform: translateX(50px);
+//       }
+//       to {
+//         opacity: 1;
+//         transform: translateX(0px);
+//       }
+//     }
+//   }
+
+//   @include for-tablet-portrait-up {
+//     .burger {
+//       display: none;
+//       cursor: pointer;
+//     }
+
+//     .nav-links {
+//       font-size: 0.8rem;
+
+//       li,
+//       a {
+//         margin: 0 4px;
+//         color: $textColor;
+//       }
+//     }
+//   }
+
+//   @include for-tablet-landscape-up {
+//     .nav-links {
+//       font-size: 1rem;
+//       margin: 0 0 0 30px;
+
+//       li,
+//       a {
+//         margin: 0 5px;
+//         color: $textColor;
+//       }
+//     }
+//   }
+
+//   @include for-desktop-up {
+   
+//     .nav-links {
+//       font-size: 1rem;
+
+//       li,
+//       a {
+//         margin: 0 10px;
+//         color: $textColor;
+//       }
+//     }
+//   }
+
+//   @include for-big-desktop-up {
+//   }
+// }
 
 //hero
 
 .hero {
+  padding-top: 8rem;
   background: $heroColor;
   height: fit-content;
   display: flex;
@@ -180,9 +211,12 @@ width: 100vw !important;
 
       p {
         font-size: 1rem;
-        line-height: 1.2;
+        line-height: 25px;
         padding-bottom: 30px;
-        font-weight: lighter;
+        // padding-right: 3rem !important;
+        // width: 1rem;
+        // font-weight: lighter;
+        // background-color: red;
       }
 
       .btn {
@@ -300,6 +334,8 @@ width: 100vw !important;
           padding-bottom: 30px;
           font-size: 19px;
 line-height: 30px;
+
+padding-right: 6rem;
         }
   
         .btn {
@@ -326,5 +362,6 @@ line-height: 30px;
       }
   }
   @include for-big-desktop-up {
+ 
   }
 }

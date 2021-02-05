@@ -44,9 +44,16 @@ font-family: Sailec;
     border-radius: 4px;
   }
   @media (max-width: 768px) {
-    padding: 2rem 0;
+    padding: 3rem 0;
+    padding-top: 8rem;
     .heroText{
         padding-left: 1rem;
+       
+    }
+    .heroText h3 {
+// background-color: aqua;
+font-size: 1.6rem;
+line-height: 35px;
     }
     .headImg{
         display: none;
@@ -80,11 +87,12 @@ font-family: Sailec;
   @media (max-width: 768px) {
     padding: 4rem 1rem;
     h3{
-        font-size: 2.3rem;
+        font-size: 1.3rem;
+        line-height: 35px;
       
     }
     p{
-        font-size: 1.2rem;
+        font-size: 1rem;
        
     }
   }
@@ -114,7 +122,21 @@ font-family: Sailec;
     line-height: 30px;
    font-family: Sailec;
     color: #303742;
+
     
+  }
+  li{
+    font-size: 21px;
+    line-height: 30px;
+   font-family: Sailec;
+    color: #303742;
+
+  }
+  .divide{
+    background-color: #000000;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
   }
 .vision{
     padding-left: 2rem;
@@ -126,12 +148,15 @@ font-family: Sailec;
         padding-left: 1rem;
     }
   h4{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       
     }
     p{
-        font-size: 1.2rem;
+        font-size: 1rem;
        
+    }
+    li{
+      font-size: 1rem;
     }
   }
 }

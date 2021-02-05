@@ -1,5 +1,6 @@
 import React from 'react'
-const Nav = () => {
+import { Nav, Navbar } from 'react-bootstrap'
+const NavBar = () => {
   const navSlide = () => {
     const burger = document.querySelector('.burger')
     const nav = document.querySelector('.nav-links')
@@ -18,8 +19,11 @@ const Nav = () => {
     burger.classList.toggle('toggle')
   }
   return (
-    <nav className="plrn">
-      <img src="/image/logo.svg" alt="" />
+    <Navbar collapseOnSelect expand="lg" className="fixed-top" style={{ backgroundColor: '#fff' }}>
+      {/* //{' '} */}
+      {/* <nav className="navbar navbar-default banner"> */}
+      {/* // <nav className="plrn"> */}
+      {/* <img src="/image/logo.svg" alt="" />
       <ul className="nav-links">
         <li>
           <a href="/">Home</a>
@@ -47,9 +51,32 @@ const Nav = () => {
         <div className="link1"></div>
         <div className="link2"></div>
         <div className="link3"></div>
-      </div>
-    </nav>
+      </div> */}
+
+      <Navbar.Brand href="/">
+        <img src="/image/logo.svg" alt="logo" />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav">
+        <img src="/image/menu.svg" alt="menu" />
+      </Navbar.Toggle>
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          {/* <Nav.Link href="#features">Features</Nav.Link>
+          <Nav.Link href="#pricing">Pricing</Nav.Link> */}
+        </Nav>
+        <Nav>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav.Link href="#services">Our Services</Nav.Link>
+          <Nav.Link href="/about">About Us</Nav.Link>
+          <Nav.Link href="#partners">Partners</Nav.Link>
+          <Nav.Link href="#contact">
+            <div className="contact">Contact Us</div>
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 
-export default Nav
+export default NavBar

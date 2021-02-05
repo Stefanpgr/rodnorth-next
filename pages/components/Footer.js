@@ -4,6 +4,7 @@ import Image from 'next/image'
 import axios from 'axios'
 import SweetAlert from 'react-bootstrap-sweetalert'
 import Link from 'next/link'
+import { Fade } from 'react-awesome-reveal'
 const Footer = () => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -42,36 +43,40 @@ const Footer = () => {
         <p className="alert-message">Thank you for subscribing to our newsletter. </p>
       </SweetAlert>
       <div className="foot__mail">
-        <img src="/image/mail.svg" alt="" className="box bounce" />
-        <div className="sub">
-          <h3>Subscribe to our newsletter</h3>
-          <Form onSubmit={handleSubmit}>
-            <Form.Row>
-              <Col md="4">
-                <Form.Control
-                  value={name}
-                  onChange={({ target }) => setName(target.value)}
-                  required
-                  placeholder="Name"
-                />
-              </Col>
-              <Col md="5">
-                <Form.Control
-                  onChange={({ target }) => setEmail(target.value)}
-                  required
-                  type="email"
-                  placeholder="Email address"
-                  value={email}
-                />
-              </Col>
-              <Col>
-                <button type="submit" className="btn" disabled={loading}>
-                  Submit
-                </button>
-              </Col>
-            </Form.Row>
-          </Form>
-        </div>
+        <Fade cascade delay={300} duration={600} direction="left" triggerOnce>
+          <img src="/image/mail.svg" alt="" className="box bounce" />
+        </Fade>
+        <Fade cascade delay={300} duration={600} direction="up" triggerOnce>
+          <div className="sub">
+            <h3>Subscribe to our newsletter</h3>
+            <Form onSubmit={handleSubmit}>
+              <Form.Row>
+                <Col md="4">
+                  <Form.Control
+                    value={name}
+                    onChange={({ target }) => setName(target.value)}
+                    required
+                    placeholder="Name"
+                  />
+                </Col>
+                <Col md="5">
+                  <Form.Control
+                    onChange={({ target }) => setEmail(target.value)}
+                    required
+                    type="email"
+                    placeholder="Email address"
+                    value={email}
+                  />
+                </Col>
+                <Col>
+                  <button type="submit" className="btn" disabled={loading}>
+                    Submit
+                  </button>
+                </Col>
+              </Form.Row>
+            </Form>
+          </div>
+        </Fade>
       </div>
 
       <div className="foot__ul">

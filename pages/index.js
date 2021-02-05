@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Col, Container, Form, Row } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
-import Nav from './components/Nav'
+import NavBar from './components/Nav'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 const { BLOG_URL, API_KEY } = process.env
 async function getPosts() {
@@ -33,29 +34,34 @@ export default function Home({ posts }) {
         <title>Rodnorth | Home</title>
       </Head>
       <main>
-        <section className="nav">
+        <section>
           <header>
-            <Nav />
+            <NavBar />
             <article className="hero plr">
               <div className="hero--para">
-                <h3 className="heading" style={{ color: 'white' }}>
-                  Helping African Businesses Unlock And Advance <br />
-                  Their Potential
-                </h3>
-                <p>
-                  Our singular goal is to meet the IT Infrastructure needs <br />
-                  in Africa with affordable technology solutions to <br />
-                  enable business processes.
-                </p>
-                <button className="btn">
-                  contact us
-                  <span>
-                    <img src="/image/arrow-right.svg" alt="arrow-right" />
-                  </span>
-                </button>
+                <Fade direction="up" cascade triggerOnce>
+                  <h3 className="heading" style={{ color: 'white' }}>
+                    Helping African Businesses Unlock And Advance <br />
+                    Their Potential
+                  </h3>
+
+                  <p>
+                    Our singular goal is to meet the IT Infrastructure needs in Africa with affordable technology
+                    solutions to enable business processes.
+                  </p>
+
+                  <button className="btn">
+                    contact us
+                    <span>
+                      <img src="/image/arrow-right.svg" alt="arrow-right" />
+                    </span>
+                  </button>
+                </Fade>
               </div>
               <div className="hero--icon">
-                <img src="/image/welcome-svg.svg" alt="" />
+                <Fade direction="right" delay={500} triggerOnce>
+                  <img src="/image/welcome-svg.svg" alt="" />
+                </Fade>
               </div>
             </article>
           </header>
@@ -64,76 +70,87 @@ export default function Home({ posts }) {
         <section className="trust plr">
           <div className="logo">
             <p>We are trusted by</p>
-            <div className="logo--img">
-              <img src="/image/aib.svg" alt="accident investigation bureau" />
-              <img src="/image/emzor.svg" alt="emzor" />
-              <img src="/image/chi.svg" alt="chi" />
-              <img src="/image/lapo.svg" alt="lapo" />
-            </div>
+            <Fade>
+              <div className="logo--img">
+                <img src="/image/aib.svg" alt="accident investigation bureau" />
+                <img src="/image/emzor.svg" alt="emzor" />
+                <img src="/image/chi.svg" alt="chi" />
+                <img src="/image/lapo.svg" alt="lapo" />
+              </div>
+            </Fade>
           </div>
 
           <div className="head">
-            <div className="center">
-              <h3 className="heading">
-                We are agile. We are responsive. We solve problems. And we solve them really well.
-              </h3>
-            </div>
+            <Fade direction="up" triggerOnce>
+              <div className="center">
+                <h3 className="heading">
+                  We are agile. We are responsive. We solve problems. And we solve them really well.
+                </h3>
+              </div>
+            </Fade>
 
             <div className="agile space-between">
               <div className="flexs">
-                <div className="flex">
-                  <div>
-                    <img src="/image/handshake.svg" />
-                  </div>
-                  <div className="px">
-                    <h4>Integrity</h4>
-                    <p>
-                      Our clients freely share their ideas and business strategies. This commitment goes way beyond
-                      formal NDAs and paper work.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div>
-                    <img src="/image/bulb.svg" />
+                <Fade cascade direction="up" duration={600} triggerOnce>
+                  <div className="flex">
+                    <div>
+                      <img src="/image/handshake.svg" />
+                    </div>
+                    <div className="px">
+                      <h4>Integrity</h4>
+                      <p>
+                        Our clients freely share their ideas and business strategies. This commitment goes way beyond
+                        formal NDAs and paper work.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="px">
-                    <h4>Innovation</h4>
-                    <p>Our clients vouch for our technological and process innovations.</p>
-                  </div>
-                </div>
+                  <div className="flex">
+                    <div>
+                      <img src="/image/bulb.svg" />
+                    </div>
 
-                <div className="flex">
-                  <div>
-                    <img src="/image/handshake.svg" alt="" />
+                    <div className="px">
+                      <h4>Innovation</h4>
+                      <p>Our clients vouch for our technological and process innovations.</p>
+                    </div>
                   </div>
 
-                  <div className="px">
-                    <h4>Serenity</h4>
-                    <p>
-                      Our clients go to bed with a problem and wake up with a solution because we guarantee serenity.
-                    </p>
+                  <div className="flex">
+                    <div>
+                      <img src="/image/handshake.svg" alt="" />
+                    </div>
+
+                    <div className="px">
+                      <h4>Serenity</h4>
+                      <p>
+                        Our clients go to bed with a problem and wake up with a solution because we guarantee serenity.
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Fade>
               </div>
-              <div className="flexs__img">
-                <img src="/image/innovation.png" className=" img-fluid" />
-              </div>
+              <Fade cascade delay={300} duration={800} direction="right" triggerOnce>
+                <div className="flexs__img">
+                  <img src="/image/innovation.png" className=" img-fluid" />
+                </div>
+              </Fade>
             </div>
           </div>
         </section>
 
-        <section className="digital-sec plr" id="services">
-          <div className="row space-between ">
-            <Col md="4">
+        <section className="digital-sec " id="services">
+          <div className="digital-row">
+            {/* <Col md="5" lg="5" sm="5"> */}
+            <Fade cascade delay={300} duration={600} direction="up" triggerOnce>
               <div className="digital">
                 <h3 className="heading">Digital transformation solution are the gospel we preach at RodNorth.</h3>
               </div>
-            </Col>
+            </Fade>
+            {/* </Col> */}
 
-            <Col md="5">
+            {/* <Col md="5" lg="4" sm="5"> */}
+            <Fade cascade delay={300} duration={600} direction="up" triggerOnce>
               <div className="cloud">
                 <p className="the-cloud">
                   The cloud is the future of Information Technology. Being a forward thinking organization, RodNorth is
@@ -141,106 +158,123 @@ export default function Home({ posts }) {
                   in the following categories
                 </p>
               </div>
-            </Col>
+            </Fade>
+            {/* </Col> */}
           </div>
 
           <div className="row ">
-            <Col md="3">
-              <div className="card">
-                <img src="/image/cloud.svg" className="card-img-top img-fluid" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Infrastructure services</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
+            {/* <Fade cascade delay={100} duration={600} direction="up"> */}
+            <Col md="5" lg="3" sm="5">
+              <Fade cascade delay={100} duration={500} direction="up" triggerOnce>
+                <div className="card">
+                  <img src="/image/cloud.svg" className="card-img-top img-fluid" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">Infrastructure services</h5>
+                    <p className="card-text">The cloud is the future of Information Technology.</p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </Col>
 
-            <Col md="3">
-              <div className="card">
-                <img src="/image/productivity.svg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Productivity, modern workspace & collaborative solutions</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
+            <Col md="5" lg="3" sm="5">
+              <Fade cascade delay={200} duration={500} direction="up" triggerOnce>
+                <div className="card">
+                  <img src="/image/productivity.svg" className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">Productivity, modern workspace & collaborative solutions</h5>
+                    <p className="card-text">The cloud is the future of Information Technology.</p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </Col>
-            <Col md="3">
-              <div className="card">
-                <img src="/image/mail.svg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Messaging services</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
+            <Col md="5" lg="3" sm="5">
+              <Fade cascade delay={300} duration={500} direction="up" triggerOnce>
+                <div className="card">
+                  <img src="/image/mail.svg" className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">Messaging services</h5>
+                    <p className="card-text">The cloud is the future of Information Technology.</p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </Col>
-            <Col md="3">
-              <div className="card">
-                <img src="/image/security.svg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Security & governance</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
+            <Col md="5" lg="3" sm="5">
+              <Fade cascade delay={500} duration={500} direction="up" triggerOnce>
+                <div className="card">
+                  <img src="/image/security.svg" className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">Security & governance</h5>
+                    <p className="card-text">The cloud is the future of Information Technology.</p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </Col>
+            {/* </Fade> */}
           </div>
-
-          <div className="butt row">
-            <button className="btn">
-              contact us
-              <span>
-                <img src="/image/arrow-right.svg" alt="arrow-right" />
-              </span>
-            </button>
-            <a className="load" href="#" style={{ marginLeft: '20px' }}>
-              Learn More
-            </a>
-          </div>
+          <Fade direction="up" delay={600} triggerOnce>
+            <div className="butt row">
+              <button className="btn">
+                contact us
+                <span>
+                  <img src="/image/arrow-right.svg" alt="arrow-right" />
+                </span>
+              </button>
+              <a className="load" href="#" style={{ marginLeft: '20px' }}>
+                Learn More
+              </a>
+            </div>
+          </Fade>
         </section>
 
         <section className="partners plr" id="partners">
-          <h3 className="patner heading text-center agile">Our Partners</h3>
-          <div className="cloud">
-            <img src="/image/google.png" alt="google" />
-            <img src="/image/aws.png" alt="aws" />
-            <img src="/image/azure.png" alt="azure" />
-            <img src="/image/hystax.png" alt="hystax" />
-            <img src="/image/whatsapp-big.svg" alt="whatsapp" />
-          </div>
-          <div className="cloud">
-            <img src="/image/Group 32.png" alt="Digital Ocean" />
-            <img src="/image/hp.png" alt="hp" />
-            <img src="/image/cloud.png" alt="cloud" />
-            <img src="/image/s.png" alt="s" />
-            <img src="/image/cloudhealth.svg" alt="cloud health" />
-            <img src="/image/nutanix.svg" alt="nutanix" />
-          </div>
-
+          <Fade direction="up" triggerOnce>
+            <h3 className="our-partner text-center">Our Partners</h3>
+            <div className="cloud">
+              <img src="/image/google.png" alt="google" />
+              <img src="/image/aws.png" alt="aws" />
+              <img src="/image/azure.png" alt="azure" />
+              <img src="/image/hystax.png" alt="hystax" />
+              <img src="/image/whatsapp-big.svg" alt="whatsapp" />
+            </div>
+            <div className="cloud">
+              <img src="/image/Group 32.png" alt="Digital Ocean" />
+              <img src="/image/hp.png" alt="hp" />
+              <img src="/image/cloud.png" alt="cloud" />
+              <img src="/image/s.png" alt="s" />
+              <img src="/image/cloudhealth.svg" alt="cloud health" />
+              <img src="/image/nutanix.svg" alt="nutanix" />
+            </div>
+          </Fade>
           <div className="testimony">
             <div className="parag">
-              <p className="p">
-                “Every single person comes away and says - wow that's a really slick experience, that was so easy to
-                use. I feel so much less stressed as I now know we’re doing everything by the book.”
-              </p>
-              <div className="person">
-                <img src="/image/person1.png" alt="" />
-                <div>
-                  <h5>Andry Ford</h5>
-                  <p>CEO at Whatever</p>
+              <Fade direction="up" triggerOnce>
+                <p className="p">
+                  “Every single person comes away and says - wow that's a really slick experience, that was so easy to
+                  use. I feel so much less stressed as I now know we’re doing everything by the book.”
+                </p>
+                <div className="person">
+                  <img src="/image/person1.png" alt="" />
+                  <div>
+                    <h5>Andry Ford</h5>
+                    <p>CEO at Whatever</p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
             <div className="parag">
-              <p className="p">
-                I feel so much less stressed <span style={{ color: 'red' }}>❤️</span> as I now know we’re doing
-                everything by the book.”
-              </p>
-              <div className="person">
-                <img src="/image/person2.png" alt="" />
-                <div>
-                  <h5>Andry Ford</h5>
-                  <p>CEO at Whatever</p>
+              <Fade direction="up" triggerOnce>
+                <p className="p">
+                  I feel so much less stressed <span style={{ color: 'red' }}>❤️</span> as I now know we’re doing
+                  everything by the book.”
+                </p>
+                <div className="person">
+                  <img src="/image/person2.png" alt="" />
+                  <div>
+                    <h5>Andry Ford</h5>
+                    <p>CEO at Whatever</p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
           </div>
         </section>
@@ -251,49 +285,25 @@ export default function Home({ posts }) {
           <h3 className="text-center">From our blog</h3>
           <div className="row plr" style={{ justifyContent: 'center', alignItems: 'center' }}>
             {posts.map((el, i) => (
-              <Col md="3" key={i}>
-                <Link href={{ pathname: '/blog/[slug]' }} as={`/blog/${el.slug}`}>
-                  <div className="card">
-                    <img src={el.feature_image} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                      <h5 className="card-title">{el.title}</h5>
-                      <p className="card-text">{el.custom_excerpt}</p>
+              <Col md="5" lg="3" sm="5" key={i}>
+                <Fade cascade delay={(i + 1) * 100} duration={600} direction="up" triggerOnce>
+                  <Link href={{ pathname: '/blog/[slug]' }} as={`/blog/${el.slug}`}>
+                    <div className="card">
+                      <img src={el.feature_image} className="card-img-top" alt="..." />
+                      <div className="card-body">
+                        <h5 className="card-title">{el.title}</h5>
+                        <p className="card-text">{el.custom_excerpt}</p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </Fade>
               </Col>
             ))}
-            <Link href="/blog">
-              <button className="btn">See More</button>
-            </Link>
-            {/* <Col md="3">
-              <div className="card">
-                <img src="/image/blog2.png" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">This is a blog title</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
-                </div>
-              </div>
-            </Col>
-            <Col md="3">
-              <div className="card">
-                <img src="/image/blog3.png" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">This is a blog title</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
-                </div>
-              </div>
-            </Col>
-
-            <Col md="3">
-              <div className="card">
-                <img src="/image/blog4.png" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">This is a blog title</h5>
-                  <p className="card-text">The cloud is the future of Information Technology.</p>
-                </div>
-              </div>
-            </Col> */}
+            <Fade direction="up" delay={700} triggerOnce>
+              <Link href="/blog">
+                <button className="btn">See More</button>
+              </Link>
+            </Fade>
           </div>
         </section>
 
