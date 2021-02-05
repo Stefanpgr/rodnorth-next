@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Fade } from 'react-awesome-reveal'
+import { Col, Form, Row } from 'react-bootstrap'
 import SweetAlert from 'react-bootstrap-sweetalert'
 const GetInTouch = () => {
   const [show, setShow] = useState(false)
@@ -49,69 +50,78 @@ const GetInTouch = () => {
       </SweetAlert>
       <section className="touchs plr" id="contact">
         <div className="touch">
-          <div className="touch__head">
-            <h3>Get in touch!</h3>
-            <p>We're excited to work with you</p>
-          </div>
+          <Fade direction="up" triggerOnce>
+            <div className="touch__head">
+              <h3>Get in touch!</h3>
+              <p>We're excited to work with you</p>
+            </div>
+          </Fade>
+
           <div className="row text-center">
             <Col>
-              <div className="touch__icons">
-                <img src="/image/location.png" alt="" />
-                <div className="touch__write">
-                  <h6>Headoffice</h6>
-                  <p>
-                    10a Ajanaku street, Awuse estate, <br />
-                    off Salvation road, Opebi Lagos.
-                  </p>
+              <Fade direction="up" triggerOnce>
+                <div className="touch__icons">
+                  <img src="/image/location.png" alt="" />
+                  <div className="touch__write">
+                    <h6>Headoffice</h6>
+                    <p>
+                      10a Ajanaku street, Awuse estate, <br />
+                      off Salvation road, Opebi Lagos.
+                    </p>
+                  </div>
+                  <div className="touch__write">
+                    <h6>Branch office</h6>
+                    <p>
+                      Suite 33, Distinct Plaza, 12 Medical road, <br />
+                      Ikeja Lagos.
+                    </p>
+                  </div>
                 </div>
-                <div className="touch__write">
-                  <h6>Branch office</h6>
-                  <p>
-                    Suite 33, Distinct Plaza, 12 Medical road, <br />
-                    Ikeja Lagos.
-                  </p>
-                </div>
-              </div>
+              </Fade>
             </Col>
             <Col>
-              <div className="touch__icons">
-                <img src="/image/call.png" alt="" />
-                <div className="touch__write">
-                  <h6>Call</h6>
-                  <p>
-                    +234 703 761 0856 <br />
-                    +234 802 103 7811
-                  </p>
-                </div>
-                <div className="touch__write">
-                  <h6>Whatsapp</h6>
+              <Fade direction="up" triggerOnce>
+                <div className="touch__icons">
+                  <img src="/image/call.png" alt="" />
+                  <div className="touch__write">
+                    <h6>Call</h6>
+                    <p>
+                      +234 703 761 0856 <br />
+                      +234 802 103 7811
+                    </p>
+                  </div>
+                  <div className="touch__write">
+                    <h6>Whatsapp</h6>
 
-                  <p>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=2348053111852"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      +234 805 311 1852
-                      <span>
-                        <img className="pl-2" src="/image/whatsapp.svg" />
-                      </span>
-                    </a>
-                  </p>
+                    <p>
+                      <a
+                        href="https://api.whatsapp.com/send?phone=2348053111852"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        +234 805 311 1852
+                        <span>
+                          <img className="pl-2" src="/image/whatsapp.svg" />
+                        </span>
+                      </a>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </Col>
             <Col>
-              <div className="touch__icons">
-                <img src="/image/mail.png" alt="" />
-                <div className="touch__write">
-                  <h6>Email</h6>
-                  <p>
-                    info@rodnorth.com <br />
-                    online@rodnorth.com
-                  </p>
+              <Fade direction="up" triggerOnce>
+                <div className="touch__icons">
+                  <img src="/image/mail.png" alt="" />
+                  <div className="touch__write">
+                    <h6>Email</h6>
+                    <p>
+                      info@rodnorth.com <br />
+                      online@rodnorth.com
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </Col>
           </div>
         </div>
@@ -120,7 +130,7 @@ const GetInTouch = () => {
           <div className="card">
             <div className="card-body">
               <h3 className="text-center card-title">Send us a message</h3>
-              <form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                 <Row className="justify-content-center">
                   <Col md="5">
                     <div className="card1">
@@ -167,7 +177,7 @@ const GetInTouch = () => {
                   </Col>
                   <Col md="5">
                     <div className="message-box">
-                      <label htmlFor="text">Message</label>
+                      {/* <label htmlFor="text">Message</label>
                       <textarea
                         required
                         name="text"
@@ -177,14 +187,23 @@ const GetInTouch = () => {
                         placeholder="Type your message here"
                         value={message}
                         onChange={({ target }) => setMessage(target.value)}
-                      ></textarea>
+                      ></textarea> */}
+                      <Form.Group controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Message</Form.Label>
+                        <Form.Control
+                          as="textarea"
+                          rows={4}
+                          value={message}
+                          onChange={({ target }) => setMessage(target.value)}
+                        />
+                      </Form.Group>
                     </div>
                   </Col>
                 </Row>
                 <div className="text-center">
                   <button className="btn">Submit</button>
                 </div>
-              </form>
+              </Form>
             </div>
           </div>
         </div>

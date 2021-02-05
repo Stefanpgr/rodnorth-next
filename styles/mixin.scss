@@ -29,7 +29,7 @@
     @media (max-width: 650px) { @content; }
   }
   @mixin for-tablet-portrait-up {
-    @media (min-width: 651px) { @content; }
+    @media (min-width: 651px) and (max-width: 1024px) { @content; }
   }
   @mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }

@@ -7,6 +7,8 @@
 //   // height: 100% !important;
 //   // width: 100% !important;
 // }
+
+$plr: 3rem 9rem;
 .btn {
   text-transform: uppercase;
   align-self: center;
@@ -205,7 +207,7 @@
     .logo {
       padding-bottom: 40px;
 
-      .logo--img img {
+      .logo--img div img {
         width: 10%;
       }
       p {
@@ -271,9 +273,12 @@
   // display: flex;
   // justify-content: space-evenly;
   // align-items: center;
-  .row {
+  .digital-row{
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
   }
 
   // .cards {
@@ -306,6 +311,10 @@
   }
   .butt {
     // padding: 20px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
     .btn {
       // padding-top: 10px ;
       // padding-bottom: 10px;
@@ -331,6 +340,10 @@
   }
 
   @include for-phone-only {
+    .digital-row{
+flex-wrap: wrap;
+padding: 1rem 2rem;
+    }
     .digital {
       padding-bottom: 30px;
       h3 {
@@ -386,6 +399,10 @@
     }
   }
   @include for-tablet-portrait-up {
+    .digital-row{
+      flex-wrap: wrap;
+      padding: 3rem 2rem;
+          }
     .digital {
       padding-bottom: 30px;
       h3 {
@@ -490,12 +507,13 @@
     }
   }
   @include for-desktop-up {
+    padding: $plr;
     .digital {
       padding-bottom: 40px;
       h3 {
-        font-size: 38px;
+        font-size: 2.2rem;
         line-height: 1.2;
-        width: 50vw;
+        // width: 50vw;
       }
     }
     .space-between {
@@ -548,8 +566,17 @@
 .partners {
   padding: 20px;
   background-color: white;
+  // margin-top: 3rem;
+  // .partner{
+  //   background-color: red;
+  // }
+  .our-partner{
+    color: #263449;
+    margin: 2rem 0;
+  }
   h3 {
     text-align: center;
+ 
   }
 
   p {
@@ -603,7 +630,10 @@ p{
     .testimony{
       padding: 2rem 1rem !important;
     }
-   
+    .our-partner{
+// background-color: red;
+font-size: 1.3rem;
+    }
    .person{
    h5{
       font-size: 1rem !important;
@@ -806,6 +836,7 @@ p{
         line-height: 44px;
         font-family: SailecMedium;
         color: #263449;
+       
       }
     }
     .touch__icons {
@@ -839,7 +870,7 @@ p{
     .card {
       border: none;
       // width: 1115px;
-      height: 518px;
+      // height: 518px;
     }
     .input input {
       background: #f0f0f2;
@@ -898,6 +929,15 @@ p{
   }
 
   @include for-phone-only {
+    .touch__head {
+      h3{
+      font-size: 1.4rem !important;
+       
+      }
+      p{
+        font-size: 1.1rem !important;
+      }
+    }
     .send-message {
       .message-box textarea {
         // background-color: darkmagenta !important;
@@ -908,6 +948,9 @@ p{
         overflow: hidden;
         // background-color: darkred;
         height: auto;
+      }
+      .card-title{
+        font-size: 1.4rem;
       }
     }
   }
@@ -962,7 +1005,8 @@ color: #5B6370;
     color: #fff;
     text-transform: capitalize;
     height: 48px;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
     justify-content: center;
     align-items: center;
   }
