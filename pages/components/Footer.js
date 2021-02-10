@@ -118,7 +118,7 @@ const Footer = () => {
               <li>
                 <h3>RodNorth Ltd</h3>
               </li>
-              <li className="rights">© 2020 RodNorth.com all rights reserved. Ltd</li>
+              <li className="rights">© {new Date().getFullYear()} RodNorth.com all rights reserved. Ltd</li>
             </ul>
           </div>
           <div className="bar">

@@ -290,19 +290,27 @@ $plr: 3rem 9rem;
   .card {
     background-color: white;
     width: 261px;
-    height: 310px;
+    // height: 310px;
     box-shadow: 0px 2px 9px #efeded;
     margin: 0.8rem auto;
     border: none;
+  
     // background-color: aqua;
-    .card-img-top {
+    
+    .card-img-top{
       width: 150px;
       height: 111.78px;
       align-self: center;
       margin-top: 1rem;
     }
-    .card-text {
-      font-size: 15px;
+    .card-text, span  {
+      font-size: 13px;
+      font-family: SailecLight;
+    }
+    .card-text span {
+      color: #990621;
+      font-family: Sailec;
+      cursor: pointer;
     }
     .card-title {
       font-size: 18px;
@@ -366,34 +374,7 @@ padding: 1rem 2rem;
       }
     }
 
-    // .cards {
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr;
-    //   margin: 10px;
-
-    //   .card {
-    //     margin: 0 0 10px 10px;
-    //     width: 200px;
-    //     // padding: 20px;
-    //     background-color: brown;
-    //     .card-img-top {
-    //       width: 150px;
-    //       height: 100px;
-    //       align-self: center;
-    //       margin-top: 1rem;
-    //     }
-
-    //     .card-title {
-    //       font-size: 0.8rem;
-    //       padding: 6px 0;
-    //     }
-
-    //     .card-text {
-    //       font-size: 0.7rem;
-    //     }
-    //   }
-    // }
-
+  
     .butt {
       margin-top: 2rem;
     }
@@ -528,34 +509,7 @@ padding: 1rem 2rem;
       }
     }
 
-    // .cards {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   padding: 15px;
-
-    //   .card {
-    //     margin: 0 35px;
-    //     width: 251px;
-    //     height: 310px;
-    //     padding: 25px;
-
-    //     .card-img-top {
-    //       width: 150px;
-    //       height: 100px;
-    //       align-self: center;
-    //       margin-top: 1rem;
-    //     }
-
-    //     .card-title {
-    //       font-size: 0.9rem;
-    //       padding: 6px 0;
-    //     }
-
-    //     .card-text {
-    //       font-size: 0.9rem;
-    //     }
-    //   }
-    // }
+  
 
     .butt {
       margin: 30px 100px;
@@ -1168,5 +1122,27 @@ line-height: 19px;
       font-size: 13px;
       padding-bottom: 5px;
     }
+  }
+}
+
+
+
+.carousel__dot{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 8px;
+height: 8px;
+border: none;
+margin: 0 0.3rem;
+}
+
+.carousel__dot--selected{
+  background-color: #fff;
+}
+
+@media (max-width: 768px){
+  .carousel__dot{
+    width: 5px;
+    height: 5px;
   }
 }

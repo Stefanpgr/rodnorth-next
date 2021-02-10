@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Col, Row, Container, CardDeck, Card } from 'react-bootstrap'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, Dot, DotGroup } from 'pure-react-carousel'
 import styles from '../../styles/Blog.module.scss'
 import Link from 'next/link'
 import GetInTouch from '../components/GetInTouch'
@@ -32,6 +32,7 @@ const Blog = ({ posts }) => {
   const d = new Date()
   const months = ['Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
   // console.log(posts.posts)
+  
   return (
     <div>
       <Head>
@@ -45,20 +46,34 @@ const Blog = ({ posts }) => {
         <title>Rodnorth | Blog</title>
       </Head>
       <Nav />
-      <CarouselProvider naturalSlideWidth={100} naturalSlideHeight={45} totalSlides={3}>
-        <Slider>
-          <Slide index={0}>
-            <Image src={posts[0].feature_image} />
-          </Slide>
-          <Slide index={1}>
-            <Image src={posts[1].feature_image} />
-          </Slide>
-          <Slide index={2}>
-            <Image src={posts[2].feature_image} />
-          </Slide>
+      <CarouselProvider naturalSlideWidth={100} naturalSlideHeight={45} totalSlides={3} style={{ marginTop: '4.5rem' }}>
+        <Slider index={0}>
+          {posts.slice(0,3).map((el, i) => (
+    
+    <Slide index={i} key={i} >
+    <Image src={el.feature_image} tag="p">
+      <div className={styles.feature_excerpt}>
+        <p style={{ zIndex: '1', top: '15rem', color: 'white' }}>{el.custom_excerpt}</p>
+
+        <div className={styles.tag}>Blog Post</div>
+      </div>
+    </Image>
+  </Slide>
+         
+          ))}
+        
         </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
+        {/* <Dot slide={0} /> */}
+
+        <div className={styles.carNav}>
+          <ButtonBack className={styles.carBtnPrev}>
+            <img src="/image/car-right.svg" />
+          </ButtonBack>
+          <DotGroup style={{ margin: '0 1rem' }} />
+          <ButtonNext className={styles.carBtn}>
+            <img src="/image/car-right.svg" />
+          </ButtonNext>
+        </div>
       </CarouselProvider>
       <Container>
         <div className="row">
