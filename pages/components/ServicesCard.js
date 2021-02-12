@@ -7,7 +7,7 @@ const Services = ({text, summary}) => {
  
     return ( 
        <>
-         {!readMore ? <p className="card-text">{summary}<span onClick={()=> setReadMore(true)}>Show More</span></p> :
+         {!readMore ? <p className="card-text">{summary}...<span onClick={()=> setReadMore(true)}>Show More</span></p> :
             <p className="card-text">
              {text} <br/> <span onClick={()=> setReadMore(false)} >Show less</span>
             </p>}

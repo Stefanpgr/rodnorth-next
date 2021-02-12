@@ -33,8 +33,24 @@ export default function Home({ posts }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <meta name="author" content="Rodnorth" />
         <title>Rodnorth | Home</title>
+        <meta name="keywords" content="Cloud Infrastructure Solutions, Cloud Security, App Migration, Cloud Backup, Cloud Productivity Tools, Messaging And Communication, Whatsapp For Business, Server Storage Hybrid Cloud, Azure Migration, Aws Migration, Google Cloud, Application Security" />
+        <meta name="description" content="On-premise and Cloud-based infrastructure and Security Solutions using
+the top cloud provides, AWS, AZURE, GOOGLE,and security Vendors, Trend
+Micro, Sophos, and all other cloud-related services. We also provide
+messaging solutions with Whatsapp for Business." />
+<meta name="og:title" content="Rodnorth - On-premise and Cloud-based infrastructure and Security Solutions using
+the top cloud provides, AWS, AZURE, GOOGLE,and security Vendors, Trend
+Micro, Sophos, and all other cloud-related services." />
+<meta name="og:url" content="https://rodnorth.com/"/>
+<meta name="og:type" content="website"/>
+<meta name="og:description" content="On-premise and Cloud-based infrastructure and Security Solutions using
+the top cloud provides, AWS, AZURE, GOOGLE,and security Vendors, Trend
+Micro, Sophos, and all other cloud-related services. We also provide
+messaging solutions with Whatsapp for Business."/>
+<meta name="og:image" content='https://rodnorth.com/image/logo.svg' / >
+       
       </Head>
       <main>
         <section>
