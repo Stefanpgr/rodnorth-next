@@ -86,7 +86,7 @@ const Content = ({ post, recent }) => {
         {/* <meta property="article:modified_time" content="2021-01-27T21:09:40.000Z" /> */}
         {/* <meta property="article:tag" content="Getting Started" /> */}
 
-        <meta property="article:publisher" content="https://www.facebook.com//rodnorthlimited" />
+        <meta property="article:publisher" content="https://www.facebook.com/rodnorthlimited" />
         <meta property="article:author" content="https://www.facebook.com/rodnorthlimited" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.posts[0].title} />
