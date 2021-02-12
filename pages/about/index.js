@@ -14,6 +14,19 @@ const About = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Rodnorth | About</title>
+        <meta name="keywords" content="Cloud Infrastructure Solutions, Cloud Security, App Migration, Cloud Backup, Cloud Productivity Tools, Messaging And Communication, Whatsapp For Business, Server Storage Hybrid Cloud, Azure Migration, Aws Migration, Google Cloud, Application Security" />
+        <meta name="description" content="On-premise and Cloud-based infrastructure and Security Solutions using
+the top cloud provides, AWS, AZURE, GOOGLE,and security Vendors, Trend
+Micro, Sophos, and all other cloud-related services. We also provide
+messaging solutions with Whatsapp for Business." />
+<meta name="og:title" content="Rodnorth | About - At RodNorth we see technology as an enabler, that helps to drive this change in business processes, thus we use state of the art technology solutions that will help drive and improve business processes." />
+<meta name="og:url" content="https://rodnorth.com/about"/>
+<meta name="og:type" content="website"/>
+<meta name="og:description" content="On-premise and Cloud-based infrastructure and Security Solutions using
+the top cloud provides, AWS, AZURE, GOOGLE,and security Vendors, Trend
+Micro, Sophos, and all other cloud-related services. We also provide
+messaging solutions with Whatsapp for Business."/>
+<meta name="og:image" content='https://rodnorth.com/image/logo.svg' / >
       </Head>
       <header>
         <Nav />

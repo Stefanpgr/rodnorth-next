@@ -93,10 +93,7 @@ const Content = ({ post, recent }) => {
         <meta name="twitter:description" content={post.posts[0].custom_excerpt} />
         <meta name="twitter:url" content={`https://rodnorth.com/blog/${post.posts[0].slug}`} />
         <meta name="twitter:image" content={post.posts[0].feature_image} />
-        {/* <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content="Ghost" />
-        <meta name="twitter:label2" content="Filed under" />
-        <meta name="twitter:data2" content="Getting Started" /> */}
+      
         <meta name="twitter:site" content="@RodnorthN" />
         <meta name="twitter:creator" content="Rodnorth" />
         <meta property="og:image:width" content="2000" />
