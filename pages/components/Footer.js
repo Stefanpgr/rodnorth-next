@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import { Form, Col } from 'react-bootstrap'
-import Image from 'next/image'
-import axios from 'axios'
-import SweetAlert from 'react-bootstrap-sweetalert'
-import Link from 'next/link'
-import { Fade } from 'react-awesome-reveal'
+import { useState } from 'react';
+import { Form, Col } from 'react-bootstrap';
+import Image from 'next/image';
+import axios from 'axios';
+import SweetAlert from 'react-bootstrap-sweetalert';
+import Link from 'next/link';
+import { Fade } from 'react-awesome-reveal';
 const Footer = () => {
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [show, setShow] = useState(false)
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [show, setShow] = useState(false);
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
     const payload = {
       email,
       name,
-    }
+    };
     try {
-      const { data } = axios.post('https://rodnorth.com/api/subscribe', payload)
+      const { data } = axios.post(
+        'https://rodnorth.com/api/subscribe',
+        payload
+      );
 
-      setLoading(false)
-      setEmail('')
-      setName('')
+      setLoading(false);
+      setEmail('');
+      setName('');
       //   console.log(data)
-      setShow(true)
+      setShow(true);
     } catch (error) {
-      setLoading(false)
-      console.log(error.response.data)
+      setLoading(false);
+      console.log(error.response.data);
     }
-  }
+  };
   return (
     <footer>
       <SweetAlert
@@ -40,7 +43,9 @@ const Footer = () => {
         show={show}
       >
         <img src="https://res.cloudinary.com/stefanpgr/image/upload/v1612268451/check.svg" />
-        <p className="alert-message">Thank you for subscribing to our newsletter. </p>
+        <p className="alert-message">
+          Thank you for subscribing to our newsletter.{' '}
+        </p>
       </SweetAlert>
       <div className="foot__mail">
         <Fade cascade delay={300} duration={600} direction="left" triggerOnce>
@@ -82,22 +87,38 @@ const Footer = () => {
       <div className="foot__ul">
         <ul className="foot_icon">
           <li>
-            <a href="https://api.whatsapp.com/send?phone=2348053111852" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://api.whatsapp.com/send?phone=2348053111852"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Image src="/image/icons/whatsapp.svg" width={26} height={26} />
             </a>
           </li>
           <li>
-            <a href="https://facebook.com/rodnorthlimited" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://facebook.com/rodnorthlimited"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Image src="/image/icons/facebook.svg" width={26} height={26} />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/RodnorthN" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://twitter.com/RodnorthN"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Image src="/image/icons/twitter.svg" width={26} height={26} />
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/rodnorthservices/" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://www.instagram.com/rodnorthservices/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Image src="/image/icons/instagram.svg" width={26} height={26} />
             </a>
           </li>
@@ -118,7 +139,10 @@ const Footer = () => {
               <li>
                 <h3>RodNorth Ltd</h3>
               </li>
-              <li className="rights">© {new Date().getFullYear()} RodNorth.com all rights reserved. Ltd</li>
+              <li className="rights">
+                © {new Date().getFullYear()} RodNorth.com all rights reserved.
+                Ltd
+              </li>
             </ul>
           </div>
           <div className="bar">
@@ -138,12 +162,15 @@ const Footer = () => {
               <li>
                 <Link href="/#partners">Partners</Link>
               </li>
+              <li>
+                <Link href="/privacy">Privacy Policy</Link>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
